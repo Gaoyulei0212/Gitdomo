@@ -1,0 +1,279 @@
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+form,
+fieldset,
+legend,
+img {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+}
+fieldset,
+input,
+img {
+  border: none;
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+ul,
+ol,
+dl {
+  list-style: none;
+}
+input {
+  outline: none;
+  border: none;
+}
+.clearfn::afeter {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+body {
+  background-color: #ea5050;
+}
+#huaWei {
+  position: relative;
+  overflow: hidden;
+  // 头部导航
+  #header-nav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .left-nav {
+      position: absolute;
+      top: 0;
+      width: 1200px;
+      display: flex;
+      justify-content: flex-end;
+      ul {
+        display: flex;
+        li {
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          a {
+            color: #ffffff;
+            padding: 23px 13px 0px;
+            font-size: 14px;
+            &:hover {
+              color: black;
+              text-decoration: black;
+            }
+          }
+        }
+        li:nth-of-type(6) {
+          background: url(../images/ia_200000002.png) no-repeat 30px 25px;
+          padding-left: 40px;
+          position: relative;
+          &::after {
+            content: "|";
+            color: #ffffff;
+            position: absolute;
+            top: 20px;
+            right: 0px;
+          }
+        }
+      }
+    }
+  }
+  // banner
+  #banner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .banner-images {
+      a {
+        position: absolute;
+      }
+      a:nth-of-type(1) {
+        width: 300px;
+        height: 300px;
+        left: 180px;
+        top: 125px;
+      }
+      a:nth-of-type(2) {
+        width: 300px;
+        height: 300px;
+        left: 490px;
+        top: 125px;
+      }
+      a:nth-of-type(3) {
+        width: 200px;
+        height: 200px;
+        left: 1376px;
+        top: 205px;
+      }
+      a:nth-of-type(4) {
+        width: 150px;
+        height: 150px;
+        left: 1278px;
+        top: 368px;
+      }
+      a:nth-of-type(5) {
+        width: 150px;
+        height: 150px;
+        left: 1065px;
+        top: 372px;
+      }
+      a:nth-of-type(6) {
+        width: 250px;
+        height: 250px;
+        left: 1417;
+        top: 112px;
+      }
+      a:nth-of-type(7) {
+        width: 185px;
+        height: 280px;
+        left: 1149px;
+        top: 74px;
+      }
+    }
+  }
+  // 固定导航
+  #flex-nav {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    // top: 0;
+    background-color: #bc2b2f;
+    box-sizing: border-box;
+    z-index: 999;
+    .sec-sec-nav {
+      height: 60px;
+      width: 1200px;
+      line-height: 60px;
+      margin: 0 auto;
+      position: relative;
+      li {
+        float: left;
+        text-align: center;
+        width: 20%;
+        box-sizing: border-box;
+        padding: 0 15px;
+        a {
+          position: relative;
+          color: #eccfd0;
+          font: 25px/60px "Helvetica Neue", "微软雅黑";
+          text-shadow: 0px 0px 3px #d07a7d;
+          &::after {
+            content: "";
+            position: absolute;
+            height: 10px;
+            border-right: 1px solid #ffffff;
+            left: 152px;
+            top: 14px;
+          }
+        }
+      }
+      #nav-laseLi {
+        a::after {
+          content: "";
+          border: none;
+        }
+      }
+    }
+  }
+  // 双十一优惠
+  #discounts-img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    left: 50%;
+    margin-left: -50%;
+    overflow: hidden;
+    text-align: center;
+  }
+  // 双十一优惠2
+  #discounts-img2 {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    left: 50%;
+    margin-left: -50%;
+    overflow: hidden;
+    text-align: center;
+    a {
+      position: absolute;
+      z-index: 2;
+    }
+    a:nth-of-type(1) {
+      width: 436px;
+      height: 115px;
+      top: 0px;
+      left: 340px;
+    }
+    a:nth-of-type(2) {
+      width: 436px;
+      height: 51px;
+      top: 111px;
+      left: 340px;
+    }
+  }
+  // 双十一优惠3
+  #discounts-img3 {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    left: 50%;
+    margin-left: -50%;
+    overflow: hidden;
+    text-align: center;
+  }
+  // 双十一优惠3
+  #discounts-img4 {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    left: 50%;
+    margin-left: -50%;
+    overflow: hidden;
+    text-align: center;
+    a {
+      position: absolute;
+      z-index: 2;
+    }
+    a:nth-of-type(1) {
+      width: 640px;
+      height: 538px;
+      top: 0px;
+      left: 340px;
+    }
+    a:nth-of-type(2) {
+      width: 292px;
+      height: 538px;
+      top: 0px;
+      left: 968px;
+    }
+    a:nth-of-type(3) {
+      width: 292px;
+      height: 538px;
+      top: 0px;
+      left: 1262px;
+    }
+  }
+}
