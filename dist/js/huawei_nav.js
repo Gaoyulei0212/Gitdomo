@@ -162,10 +162,76 @@ define(['jquery','jquery-cookie'], function($) {
         function fromHide(){
           $("[type='text']").focus(function(){
             $(".from-text").css("display","none")
-          }).blur(function(){
-            $(".from-text").css("display","block")
+          })
+
+          var searshInp = document.querySelector(".right-nav-form [type='text']")
+          var listBox = document.getElementsByClassName("list-group")[0]
+          
+          function search(){
+            var key1 = $(".right-nav [type='text']")[0].value
+            var str = ``;
+            var newarr = [];
+            listBox.innerHTML =  "";
+            $(".list-group").css("display","block")
+            if(key1.trim(0).length == 0){
+              $(".list-group").css("display","none")
+            }
+            
+              $.ajax({
+                
+                type :"get",
+                url :"../data/data.json",
+                success: function (arr) {
+                    
+                    for(var i = 0;i < arr.length;i++){
+                    var flag = arr[i].title.toLowerCase().indexOf(key1);
+                      
+                      if(flag > 0){
+                        newarr.push(arr[i].title);
+                      }
+                    }
+                    
+                   for(var j = 0 ;j < newarr.length ; j++){
+                    str += `
+                    <li class="list-group-item"> ${newarr[j]} </li>
+                     `
+                    listBox.innerHTML = str;
+                    }
+                    
+                    if(key1.trim(0).length == 0){
+                      newarr.splice(0, arr.length);
+                    }
+                },
+                error: function (msg) {
+                  alert(msg);
+                },
+              })
+              
+          }
+          search = throttle(search,500)
+          searshInp.onkeyup = search;
+          
+          function throttle(funcName, delay){
+            var preTime = 0;
+            var curTime = Date.now();
+            return function(){
+              const context = this;
+              const args = [...arguments];
+              curTime = Date.now();
+              if(curTime - preTime >= delay){
+                funcName.apply(context, args);
+                preTime = curTime;
+              }
+            }
+          }
+          
+          $(".right-nav-form").on("click",".list-group-item",function(){
+            $(".right-nav .nav-search")[0].value = $(this).html();
+            $(".list-group").css("display","none")
           })
         }
+
+        
 
         // 翻转
         function rotateDraw(){

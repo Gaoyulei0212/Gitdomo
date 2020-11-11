@@ -81,7 +81,6 @@ define(['jquery',], function($) {
             if($(window).scrollTop() < 670){
                 $("#flex-nav").css({
                     position: 'relative', 
-                    left: -62 + 'px'
                 })
             }
         })
