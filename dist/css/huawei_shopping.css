@@ -342,13 +342,13 @@ input[type="checkbox"]:checked::after {
               margin: 0; }
             #shopping #main .wrapper .commodity-data li .title .sale {
               border: 1px solid #ca141d;
-              width: 90px;
               height: 24px;
               line-height: 26px;
               text-align: center;
               padding: 0 8px;
               color: #ca141d;
-              margin: 0; }
+              margin: 0;
+              width: 140px; }
           #shopping #main .wrapper .commodity-data li .priceMoney {
             width: 100px;
             margin-left: 30px; }
@@ -374,7 +374,10 @@ input[type="checkbox"]:checked::after {
             #shopping #main .wrapper .commodity-data li .stock-btn .btn-num {
               width: 42px;
               height: 20px;
-              padding: 0; }
+              padding: 0;
+              line-height: 20px;
+              text-align: center;
+              color: #020202; }
           #shopping #main .wrapper .commodity-data li .unit em {
             font-style: normal; }
           #shopping #main .wrapper .commodity-data li .subtotal {
@@ -408,8 +411,8 @@ input[type="checkbox"]:checked::after {
         position: relative; }
         #shopping #footer .wrapper .foo-left .del-choice {
           position: absolute;
-          top: 19px;
-          left: 50px;
+          top: 20px;
+          left: 70px;
           white-space: nowrap; }
       #shopping #footer .wrapper .foo-right {
         width: 320px;

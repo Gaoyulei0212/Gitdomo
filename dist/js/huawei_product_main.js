@@ -6,6 +6,7 @@ require.config({
         jquery:"jquery-1.10.1.min",
         "jquery-cookie":"jquery.cookie",
         parabola:"parabola",
+        cookie:"cookie",
         huawei_product:"huawei_product"
     },
     // jquery-cookie 是依赖于jquery开发

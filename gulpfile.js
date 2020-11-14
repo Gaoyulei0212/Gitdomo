@@ -55,8 +55,15 @@ gulp.task("data",function(){
     .pipe(connect.reload());
 })
 
+// 拷贝php
+gulp.task("php",function(){
+    return gulp.src("*.php")
+    .pipe(gulp.dest("dist/php"))
+    .pipe(connect.reload());
+})
+
 // 一次执行所有项目
-gulp.task("build",["copy-html","images","scss","scripts","data"],function(){
+gulp.task("build",["copy-html","images","scss","scripts","data","php"],function(){
     console.log('项目建立成功！');
 });
 
@@ -67,6 +74,7 @@ gulp.task("watch",function(){
     gulp.watch('*.scss',['scss']);
     gulp.watch(["*.js", "!gulpfile.js"],['scripts']);
     gulp.watch(["*.json", "!package.json"],['data']);
+    gulp.watch('*.php',['php']);
 })
 
 // 启动服务器

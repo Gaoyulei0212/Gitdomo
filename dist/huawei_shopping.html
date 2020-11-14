@@ -4,9 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <meta http-equiv="refresh" content="1" /> -->
     <title>华为_购物车</title>
     <link rel="icon" href="https://www.vmall.com/favicon.ico" />
-    <link rel="stylesheet" href="./css/shopping.min.css" />
+    <link rel="stylesheet" href="./css/huawei_shopping.min.css" />
+    <script
+      src="./js/require.js"
+      async="true"
+      defer
+      data-main="./js/huawei_main_shopping.js"
+    ></script>
   </head>
   <body>
     <main id="shopping">
@@ -111,7 +118,6 @@
             </a>
             <h3 class="head-left-txt">我的购物车</h3>
           </aside>
-
           <aside class="head-right"></aside>
         </article>
       </section>
@@ -121,7 +127,12 @@
           <ul class="main-ul">
             <li>
               <label for="choice2" class="left">
-                <input type="checkbox" id="choice2" class="choice2" />全选
+                <input
+                  type="checkbox"
+                  id="choice2"
+                  class="choice2"
+                  name="quan"
+                />全选
               </label>
             </li>
             <li>商品</li>
@@ -130,8 +141,6 @@
             <li>小计</li>
             <li>操作</li>
           </ul>
-
-          
         </article>
       </section>
 
@@ -140,7 +149,7 @@
         <article class="wrapper">
           <ul class="commodity-data">
             <!-- 假数据 -->
-            <li  id="">
+            <!-- <li  id="">
               <p class="check">
                 <input type="checkbox" class="readonly" />
               </p>
@@ -162,101 +171,94 @@
               </p>
               <p class="stock-btn">
                 <a href="javascript:" class="decrease">-</a>
-                <input type="text" value="1" class="btn-num"/>
+                <span class="btn-num"></span>
                 <a href="javascript:" class="add">+</a>
               </p>
               <p class="subtotal"><em>￥</em>3988</p>
               <p class="del">删除</p>
-            </li>
-            
+            </li> -->
           </ul>
         </article>
       </section>
-      
+
       <!-- 购物车底部 -->
       <section id="footer">
         <article class="wrapper">
           <aside class="foo-left">
             <label for="choice1" class="left">
-              <input type="checkbox" id="choice1" class="choice1" />全选
+              <input
+                type="checkbox"
+                id="choice1"
+                class="choice1"
+                name="quan"
+              />全选
             </label>
             <a href="javascript:;" class="del-choice">删除</a>
           </aside>
           <aside class="foo-right">
             <span>总计:<em> ￥ </em><i class="money"></i></span>
-            <button type="button" class="mo-dal">
-              立即结算
-            </button>
+            <button type="button" class="mo-dal">立即结算</button>
           </aside>
-          </article>
+        </article>
       </section>
 
       <!-- 图片区 -->
       <section id="imglis">
-        <img src="./images/ia_100000015.png" alt="">
+        <img src="./images/ia_100000015.png" alt="" />
       </section>
 
       <!-- 底部列表 -->
       <section id="bottom-list">
         <article class="wrapper">
-         <aside class="left-wrp">
-          <ul class="ullis">
-            <li> <a href="#"> 购物相关 </a></li>
-            <li> <a href="#"> 购物指南 </a></li>
-            <li> <a href="#"> 配送方式 </a></li>
-            <li> <a href="#"> 支付方式 </a></li>
-            <li> <a href="#"> 常见问题 </a></li>
-          </ul>
-          <ul class="ullis">
-            <li> <a href="#"> 保修与退换货 </a></li>
-            <li> <a href="#"> 保修政策 </a></li>
-            <li> <a href="#"> 退换贷政策 </a></li>
-            <li> <a href="#"> 退换货流程 </a></li>
-            <li> <a href="#"> 保修状态查询 </a></li>
-            <li> <a href="#"> 配件防伪查询 </a></li>
-          </ul>
-          <ul class="ullis">
-            <li> <a href="#"> 维修与技术支持 </a></li>
-            <li> <a href="#"> 服务店 </a></li>
-            <li> <a href="#"> 预约维修 </a></li>
-            <li> <a href="#"> 手机寄修 </a></li>
-            <li> <a href="#"> 备件价格查询 </a></li>
-            <li> <a href="#"> 上门服务 </a></li>
-          </ul>
-          <ul class="ullis">
-            <li> <a href="#"> 特色服务 </a></li>
-            <li> <a href="#"> 防伪查询 </a></li>
-            <li> <a href="#"> 以旧换新 </a></li>
-            <li> <a href="#"> 礼品包装 </a></li>
-          </ul>
-          <ul class="ullis">
-            <li> <a href="#"> 公司介绍 </a></li>
-            <li> <a href="#"> 华为商城简介 </a></li>
-            <li> <a href="#"> 华为零售店 </a></li>
-            <li> <a href="#"> 荣耀零售店 </a></li>
-            <li> <a href="#"> 诚征英才 </a></li>
-            <li> <a href="#"> 意见反馈 </a></li>
-          </ul>
-          <ul class="ullis">
-            <li> <a href="#"> 友情链接 </a></li>
-            <li> <a href="#"> 华为手机 </a></li>
-            <li> <a href="#"> 智能电视 </a></li>
-            <li> <a href="#"> UC浏览器 </a></li>
-            <li> <a href="#"> 中关村商城 </a></li>
-          </ul>
-         </aside>
-         <aside class="right-wrp"></aside>
+          <aside class="left-wrp">
+            <ul class="ullis">
+              <li><a href="#"> 购物相关 </a></li>
+              <li><a href="#"> 购物指南 </a></li>
+              <li><a href="#"> 配送方式 </a></li>
+              <li><a href="#"> 支付方式 </a></li>
+              <li><a href="#"> 常见问题 </a></li>
+            </ul>
+            <ul class="ullis">
+              <li><a href="#"> 保修与退换货 </a></li>
+              <li><a href="#"> 保修政策 </a></li>
+              <li><a href="#"> 退换贷政策 </a></li>
+              <li><a href="#"> 退换货流程 </a></li>
+              <li><a href="#"> 保修状态查询 </a></li>
+              <li><a href="#"> 配件防伪查询 </a></li>
+            </ul>
+            <ul class="ullis">
+              <li><a href="#"> 维修与技术支持 </a></li>
+              <li><a href="#"> 服务店 </a></li>
+              <li><a href="#"> 预约维修 </a></li>
+              <li><a href="#"> 手机寄修 </a></li>
+              <li><a href="#"> 备件价格查询 </a></li>
+              <li><a href="#"> 上门服务 </a></li>
+            </ul>
+            <ul class="ullis">
+              <li><a href="#"> 特色服务 </a></li>
+              <li><a href="#"> 防伪查询 </a></li>
+              <li><a href="#"> 以旧换新 </a></li>
+              <li><a href="#"> 礼品包装 </a></li>
+            </ul>
+            <ul class="ullis">
+              <li><a href="#"> 公司介绍 </a></li>
+              <li><a href="#"> 华为商城简介 </a></li>
+              <li><a href="#"> 华为零售店 </a></li>
+              <li><a href="#"> 荣耀零售店 </a></li>
+              <li><a href="#"> 诚征英才 </a></li>
+              <li><a href="#"> 意见反馈 </a></li>
+            </ul>
+            <ul class="ullis">
+              <li><a href="#"> 友情链接 </a></li>
+              <li><a href="#"> 华为手机 </a></li>
+              <li><a href="#"> 智能电视 </a></li>
+              <li><a href="#"> UC浏览器 </a></li>
+              <li><a href="#"> 中关村商城 </a></li>
+            </ul>
+          </aside>
+          <aside class="right-wrp"></aside>
         </article>
       </section>
     </main>
   </body>
 </html>
-
-
-
-
-
-
-
-
-

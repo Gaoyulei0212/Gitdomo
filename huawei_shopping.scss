@@ -406,13 +406,13 @@ input[type="checkbox"]:checked::after {
             }
             .sale {
               border: 1px solid #ca141d;
-              width: 90px;
               height: 24px;
               line-height: 26px;
               text-align: center;
               padding: 0 8px;
               color: #ca141d;
               margin: 0;
+              width: 140px;
             }
           }
           .priceMoney {
@@ -445,6 +445,9 @@ input[type="checkbox"]:checked::after {
               width: 42px;
               height: 20px;
               padding: 0;
+              line-height: 20px;
+              text-align: center;
+              color: #020202;
             }
           }
           .unit {
@@ -492,8 +495,8 @@ input[type="checkbox"]:checked::after {
         position: relative;
         .del-choice {
           position: absolute;
-          top: 19px;
-          left: 50px;
+          top: 20px;
+          left: 70px;
           white-space: nowrap;
         }
       }
