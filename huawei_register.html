@@ -29,7 +29,7 @@
         </section>
       </header>
       <section id="huawei_meny">
-        <form action="" class="meny_form">
+        <form action="./php/conn.php" class="meny_form" method="POST">
           <h1>华为账号登陆</h1>
           <h3>已有账号，<a href="huawei_login.html">去登陆</a></h3>
           <article class="state">
@@ -38,41 +38,44 @@
               <option value="">中国</option>
             </select>
           </article>
-          <article class="cell">
-            <input type="text" placeholder="请输入手机号" />
-          </article>
           <article class="verify">
-            <input type="text" placeholder="短信验证码" />
-            <a href="#" class="getverify">获取验证码</a>
+            <input type="text" placeholder="请输入用户名" class="username" />
+            <h6></h6>
+          </article>
+          <article class="cell">
+            <input type="text" placeholder="请输入手机号" class="cell-phone" />
+            <h6></h6>
           </article>
           <article class="psw">
-            <input type="password" placeholder="密码" id="" />
+            <input type="password" class="password" placeholder="密码" id="" />
+            <h6></h6>
             <i class="eyeimg">
               <img src="./images/ia_100000012473.png" alt="" />
             </i>
           </article>
           <article class="flagpsw">
-            <input type="password" placeholder="确认密码" id="" />
+            <input
+              type="password"
+              class="psw-con"
+              placeholder="确认密码"
+              id=""
+            />
             <i class="eyeimg">
               <img src="./images/ia_100000012473.png" alt="" />
             </i>
+            <h6></h6>
           </article>
-          <article class="birth">
-            <aside>出生日期</aside>
-            <aside>
-              <select name="YYYY">
-                <option value="">年</option>
-              </select>
-              <select name="MM">
-                <option value="">月</option>
-              </select>
-              <select name="DD">
-                <option value="">日</option>
-              </select>
-            </aside>
-          </article>
+          <img id="codeP" src="./php/picture.php" οnclick="refresh()" />
+          <input
+            type="Captcha"
+            id="Captcha"
+            placeholder="请输入验证码！"
+            name="captcha_u"
+            style="width: 130px"
+          />
+          <span class="">点击图片刷新验证码</span><br />
           <article class="reg">
-            <span>注册</span>
+            <input type="submit" value="提交" id="sub" />
           </article>
         </form>
       </section>
@@ -93,3 +96,8 @@
     </main>
   </body>
 </html>
+<script>
+  function refresh() {
+    document.getElementById("codeP").src = "picture.php?tm=" + Math.random();
+  }
+</script>

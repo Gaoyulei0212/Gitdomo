@@ -126,6 +126,7 @@ define(["jquery", "jquery-cookie"], function ($) {
               $.cookie("goods", JSON.stringify(cookieArr), {
                 expires: 7,
               });
+              totalprice();
               break;
             case "add":
               var id = target.parentNode.parentNode.id;
